@@ -35,10 +35,12 @@ uvicorn app.main:app --port 8000 --reload
 
 ├── app/
 │   ├── __init__.py
+
 │   └── main.py              # Complete API implementation (all endpoints & aggregations)
 
 ├── sample_data/
-│   ├── employees.json        # Extended JSON sample employees
+
+│   ├── employees.json         # Extended JSON sample employees
 
 │   └── attendance_logs.json  # Extended JSON sample attendance logs
 
