@@ -31,21 +31,32 @@ uvicorn app.main:app --port 8000 --reload
 - Defect review of starter code: [`REVIEW.md`](./REVIEW.md)
 - Architectural & design decisions: [`DECISIONS.md`](./DECISIONS.md)
 
-Project Structure
+# Project Structure
 
 ├── app/
 │   ├── __init__.py
 │   └── main.py              # Complete API implementation (all endpoints & aggregations)
+
 ├── sample_data/
 │   ├── employees.json        # Extended JSON sample employees
+
 │   └── attendance_logs.json  # Extended JSON sample attendance logs
+
 ├── .env.example             # Environment configuration template
+
 ├── DATA_MODEL.md            # MongoDB collection and document specification
+
 ├── DECISIONS.md             # Key architectural & engineering design decisions
+
 ├── IMPLEMENTATION.md        # In-depth technical walkthrough of rules and pipelines
+
 ├── openapi.yaml             # Complete OpenAPI 3.0 API contract
+
 ├── requirements.txt         # Project dependencies
+
 ├── REVIEW.md                # Detailed log of 26 defects identified & fixed from starter
+
 ├── sample_seed.py           # Database seeder script
+
 └── README.md                # Project guide & documentation
 
