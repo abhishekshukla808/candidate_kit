@@ -1,15 +1,21 @@
-# Candidate kit
+# Employee Attendance & Analytics API
 
-Read in this order:
+A high-performance, production-grade attendance logging and analytics service built with FastAPI and MongoDB, conforming strictly to the OpenAPI 3.0 specification (openapi.yaml) and business rules R1–R10.
 
-1. `PROBLEM_STATEMENT.docx`: what you are asked to do, how it is evaluated.
-2. `openapi.yaml`: the API contract and the business rules (R1 - R10).
-3. `DATA_MODEL.md`: what is stored in MongoDB, with nine sample documents.
-4. `app/main.py`: the starter. Put **all** your code in this one file. It must start with `uvicorn app.main:app --port 8000`.
-5. `REVIEW.md`, `DECISIONS.md`: templates to fill in.
+All application logic, validation schemas, database operations, and MongoDB aggregation pipelines reside in a single file: app/main.py.
 
-`sample_data/` holds the nine sample documents as MongoDB Extended JSON; `sample_seed.py` loads them. The grader's dataset is
-much larger and contains cases they do not show.
+Tech Stack
+
+Framework: FastAPI (Python 3.12+)
+
+Server: Uvicorn
+
+Database: MongoDB 
+
+Driver: PyMongo
+
+Data Validation: Pydantic v2
+
 
 ## Local setup
 ```bash
@@ -25,5 +31,21 @@ uvicorn app.main:app --port 8000 --reload
 - Defect review of starter code: [`REVIEW.md`](./REVIEW.md)
 - Architectural & design decisions: [`DECISIONS.md`](./DECISIONS.md)
 
+Project Structure
 
+├── app/
+│   ├── __init__.py
+│   └── main.py              # Complete API implementation (all endpoints & aggregations)
+├── sample_data/
+│   ├── employees.json        # Extended JSON sample employees
+│   └── attendance_logs.json  # Extended JSON sample attendance logs
+├── .env.example             # Environment configuration template
+├── DATA_MODEL.md            # MongoDB collection and document specification
+├── DECISIONS.md             # Key architectural & engineering design decisions
+├── IMPLEMENTATION.md        # In-depth technical walkthrough of rules and pipelines
+├── openapi.yaml             # Complete OpenAPI 3.0 API contract
+├── requirements.txt         # Project dependencies
+├── REVIEW.md                # Detailed log of 26 defects identified & fixed from starter
+├── sample_seed.py           # Database seeder script
+└── README.md                # Project guide & documentation
 
